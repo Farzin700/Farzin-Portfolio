@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <meta name="description" content="The portfolio of Mubarak Shah Farzin — software and web development, graphic design, and IT support.">
+    <title>Mubarak Shah Farzin — Portfolio</title>
+    <script>
+      (() => {
+        let theme;
+        try {
+          theme = localStorage.getItem("portfolio-theme");
+        } catch (error) {
+          console.warn("Could not read the saved color theme.", error);
+        }
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Mubarak Shah Farzin, home">MSF<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20.2 15.1A8.4 8.4 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="theme-label">Dark mode</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero page-wrap" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Portfolio <span class="eyebrow-divider">/</span> Kabul, Afghanistan</p>
+          <h1 id="hero-title">Mubarak Shah<br><span>Farzin</span></h1>
+          <p class="hero-summary">I bring together software development, thoughtful design, and practical IT support to make useful work happen.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#experience">Explore my experience <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="assets/Mubarak-Shah-Farzin-Resume.pdf" download>Download resume <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <aside class="hero-note" aria-label="Professional focus">
+          <span class="note-index">01 — 04</span>
+          <p>Software &amp; web<br>Graphic design<br>IT support<br>Design instruction</p>
+          <span class="note-caption">A multidisciplinary practice</span>
+        </aside>
+        <a class="scroll-cue" href="#about"><span aria-hidden="true">↓</span> Scroll to explore</a>
+      </section>
+
+      <section class="intro section-band" id="about" aria-labelledby="about-title">
+        <div class="page-wrap split-section">
+          <p class="section-label"><span>01</span> About</p>
+          <div class="section-content">
+            <h2 id="about-title">Curious by nature.<br><em>Practical by design.</em></h2>
+            <p class="lead">I’m a multidisciplinary professional with experience across software development, graphic design, IT support, and design education.</p>
+            <p>My work has included contributing to a library management system, creating branding and promotional materials, and helping learners build confidence with design tools. I enjoy moving between technical problem-solving and visual communication.</p>
+            <p class="pronouns">Mubarak Shah Farzin <span>·</span> they/them</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience page-wrap section-pad" id="experience" aria-labelledby="experience-title">
+        <div class="split-section">
+          <p class="section-label"><span>02</span> Experience</p>
+          <div class="section-content">
+            <h2 id="experience-title">Where I’ve<br><em>made an impact.</em></h2>
+            <div class="timeline">
+              <article class="job">
+                <div class="job-meta"><span>Feb 2026 — Present</span><span class="job-type">Design · Education</span></div>
+                <h3>Graphic Designer &amp; Graphic Design Instructor</h3>
+                <p class="company">Partaw Sharq Educational Center</p>
+                <p>Create advertising and promotional materials while providing hands-on instruction in graphic design tools, including Photoshop, Illustrator, and InDesign.</p>
+              </article>
+              <article class="job">
+                <div class="job-meta"><span>Oct 2025 — Jan 2026</span><span class="job-type">Graphic design</span></div>
+                <h3>Graphic Designer</h3>
+                <p class="company">Balkh Sadaqat Mining Company</p>
+                <p>Designed branding and print and digital collateral for the company.</p>
+              </article>
+              <article class="job">
+                <div class="job-meta"><span>Apr 2025 — Jul 2025</span><span class="job-type">Software development</span></div>
+                <h3>Developer</h3>
+                <p class="company">Kabul Educational University</p>
+                <p>Contributed to a Library Management System for the CS Library, organizing the software requirements specification and codebase and working on backend development, functionality, and maintainability.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section-band" id="skills" aria-labelledby="skills-title">
+        <div class="page-wrap split-section">
+          <p class="section-label"><span>03</span> Skills</p>
+          <div class="section-content">
+            <h2 id="skills-title">A versatile<br><em>toolkit.</em></h2>
+            <div class="skill-grid">
+              <article class="skill-group">
+                <span class="skill-number">01</span>
+                <h3>Development</h3>
+                <p>Java, C++, PHP, JavaScript<br>HTML5, CSS3, Bootstrap, React.js<br>MySQL</p>
+              </article>
+              <article class="skill-group">
+                <span class="skill-number">02</span>
+                <h3>Visual design</h3>
+                <p>Adobe Photoshop, Illustrator, InDesign<br>Premiere Pro, After Effects<br>CorelDRAW</p>
+              </article>
+              <article class="skill-group">
+                <span class="skill-number">03</span>
+                <h3>IT &amp; support</h3>
+                <p>Hardware and software troubleshooting<br>Networking, internet and email systems<br>Website, domain and hosting management</p>
+              </article>
+              <article class="skill-group">
+                <span class="skill-number">04</span>
+                <h3>Productivity</h3>
+                <p>Microsoft Word, Excel, PowerPoint<br>Digital file management</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="education page-wrap section-pad" id="education" aria-labelledby="education-title">
+        <div class="split-section">
+          <p class="section-label"><span>04</span> Education</p>
+          <div class="section-content">
+            <h2 id="education-title">Built on<br><em>good foundations.</em></h2>
+            <div class="education-list">
+              <article class="education-item">
+                <span class="education-year">2021 — 2025</span>
+                <div><h3>Bachelor’s in Computer Science — Information System</h3><p>Kabul Education University</p></div>
+              </article>
+              <article class="education-item">
+                <span class="education-year">2007 — 2019</span>
+                <div><h3>High School</h3><p>Shuhada e Paijulga</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work section-band" id="work" aria-labelledby="work-title">
+        <div class="page-wrap split-section">
+          <p class="section-label"><span>05</span> Selected work</p>
+          <div class="section-content">
+            <h2 id="work-title">A space for<br><em>what’s next.</em></h2>
+            <p class="work-note">Design samples will be added here when available.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact page-wrap" id="contact" aria-labelledby="contact-title">
+        <p class="section-label"><span>06</span> Contact</p>
+        <div class="contact-content">
+          <p class="eyebrow">Have an opportunity in mind?</p>
+          <h2 id="contact-title">Let’s make<br><em>something useful.</em></h2>
+          <a class="contact-email" href="mailto:FarzinKhan193@gmail.com">FarzinKhan193@gmail.com <span aria-hidden="true">↗</span></a>
+          <div class="contact-details">
+            <a href="tel:+93776072370">+93 776 072 370</a>
+            <span>Kabul, Afghanistan</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-wrap footer-inner">
+        <a class="wordmark" href="#top" aria-label="Back to top">MSF<span>.</span></a>
+        <span>© 2026 Mubarak Shah Farzin</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
